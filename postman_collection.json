@@ -1,0 +1,96 @@
+{
+     "info": {
+          "_postman_id": "bosta-assessment-collection",
+          "name": "Bosta Assessment API",
+          "description": "Collection for the Bosta Assessment E-commerce API",
+          "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+     },
+     "item": [
+          {
+               "name": "Products - List & Search",
+               "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                         "raw": "http://localhost:3000/api/products?q=&category=&attributes=",
+                         "protocol": "http",
+                         "host": [
+                              "localhost"
+                         ],
+                         "port": "3000",
+                         "path": [
+                              "api",
+                              "products"
+                         ],
+                         "query": [
+                              {
+                                   "key": "q",
+                                   "value": "",
+                                   "description": "Search term (title/description)"
+                              },
+                              {
+                                   "key": "category",
+                                   "value": "",
+                                   "description": "Category ID"
+                              },
+                              {
+                                   "key": "attributes",
+                                   "value": "",
+                                   "description": "Comma-separated list of Attribute Value IDs (e.g. 10,11)"
+                              }
+                         ]
+                    }
+               },
+               "response": []
+          },
+          {
+               "name": "Categories - List All",
+               "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                         "raw": "http://localhost:3000/api/categories",
+                         "protocol": "http",
+                         "host": [
+                              "localhost"
+                         ],
+                         "port": "3000",
+                         "path": [
+                              "api",
+                              "categories"
+                         ]
+                    }
+               },
+               "response": []
+          },
+          {
+               "name": "Categories - Get Attributes",
+               "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                         "raw": "http://localhost:3000/api/categories/:category/attributes",
+                         "protocol": "http",
+                         "host": [
+                              "localhost"
+                         ],
+                         "port": "3000",
+                         "path": [
+                              "api",
+                              "categories",
+                              ":category",
+                              "attributes"
+                         ],
+                         "variable": [
+                              {
+                                   "key": "category",
+                                   "value": "1",
+                                   "description": "Category ID"
+                              }
+                         ]
+                    }
+               },
+               "response": []
+          }
+     ]
+}
